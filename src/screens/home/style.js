@@ -58,14 +58,15 @@ export const styles = {
     maxWidth: 300,
     margin: "1rem",
   },
+  bookTitleLink: { textDecoration: "none", color: "black", cursor: "pointer" },
   avatar: {
     bgcolor: "red",
   },
   cardHeader: {
-    height: "50px",
+    height: "100px",
   },
   cardContent: {
-    height: "80px",
+    height: "100px",
     margin: "1rem",
   },
   pagination: {

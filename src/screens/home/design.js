@@ -24,6 +24,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import Footer from "../../components/Footer";
 import { styles } from "./style";
 import { truncateText } from "../../helper/function";
+import { NavLink } from "react-router-dom";
 
 function Design({
   currentPage,
@@ -48,6 +49,7 @@ function Design({
     cardHeader,
     cardContent,
     pagination,
+    bookTitleLink,
   } = styles;
   return (
     <>
@@ -121,15 +123,21 @@ function Design({
                   </Avatar>
                 }
                 sx={cardHeader}
-                title={truncateText(book.title, 5)}
+                title={
+                  <NavLink to={"/book/123"} style={bookTitleLink}>
+                    <Typography>{truncateText(book.title, 5)}</Typography>
+                  </NavLink>
+                }
                 subheader={book.publishedDate}
               />
-              <CardMedia
-                component="img"
-                height="194"
-                image={bgImage}
-                alt={book.title}
-              />
+              <NavLink to={"/book/123"} style={bookTitleLink}>
+                <CardMedia
+                  component="img"
+                  height="194"
+                  image={bgImage}
+                  alt={book.title}
+                />
+              </NavLink>
               <CardContent sx={cardContent}>
                 <Typography variant="body2" color="text.secondary">
                   {truncateText(book.description, 25)}

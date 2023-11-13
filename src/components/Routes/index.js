@@ -7,6 +7,7 @@ import Books from "../../screens/books";
 import Settings from "../../pages/Settings";
 import ProtectedRoute from "../ProtectedRoutes";
 import Page404 from "../../screens/Page404";
+import Book from "../../screens/book";
 
 const AppRoutes = ({ isAuthenticated }) => {
   return (
@@ -67,6 +68,18 @@ const AppRoutes = ({ isAuthenticated }) => {
               isAuthenticated={isAuthenticated}
               path="/settings"
               element={<Settings />}
+              redirectPath="/signin"
+            />
+          }
+        />
+        <Route
+          exact
+          path="/book/:id"
+          element={
+            <ProtectedRoute
+              isAuthenticated={isAuthenticated}
+              path="/book/:id"
+              element={<Book />}
               redirectPath="/signin"
             />
           }

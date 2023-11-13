@@ -62,9 +62,8 @@ function Design() {
             {"Copyright © "}
             <Link color="inherit" href="https://your-website.com/">
               Book Writer
-            </Link>{" "}
-            {new Date().getFullYear()}
-            {"."}
+            </Link>
+            {` ${new Date().getFullYear()} .`}
           </Typography>
         </Box>
       </Container>

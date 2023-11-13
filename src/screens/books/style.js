@@ -21,4 +21,5 @@ export const styles = {
   },
   tabsContainer: { backgroundColor: "#eeeeee" },
   filterContainerMain: { marginTop: "30px" },
+  bookTitleLink: { textDecoration: "none", color: "black", cursor: "pointer" },
 };
